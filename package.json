@@ -1,6 +1,6 @@
 {
   "name": "wikiboard",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Powerful input method for complex communication with bots.",
   "type": "module",
   "main": "index.js",
