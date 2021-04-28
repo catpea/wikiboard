@@ -1,0 +1,32 @@
+{
+  "name": "wikiboard",
+  "version": "1.0.6",
+  "description": "Powerful input method for complex communication with bots.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "save": "git add .; git commit -m 'New Release'; git push; npm version patch; npm publish; git push;",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "@catpea",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/router": "^10.0.0",
+    "ejs": "^3.1.6",
+    "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "koa-static": "^5.0.0",
+    "koa-views": "^7.0.1",
+    "marked": "^2.0.3",
+    "peacoat": "^1.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catpea/wikiboard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/catpea/wikiboard/issues"
+  },
+  "homepage": "https://github.com/catpea/wikiboard#readme"
+}

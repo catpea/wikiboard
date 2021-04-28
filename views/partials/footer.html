@@ -1,0 +1,22 @@
+<footer class="container mt-5">
+   <div class="row">
+     <div class="col-12 col-md-6 col-lg-3 text-white">
+       <p class="display-6"><%= title %></p>
+       <small><%= description %></small>
+     </div>
+     <div class="col-12 col-md-6 col-lg-3">
+       <% navigation.forEach(function(entry){ %>
+         <li class="">
+           <a class="fw-light text-light text-decoration-none" aria-current="page" href="<%= entry.href %>"><i class="bi bi-<%= entry.icon %> align-text-bottom text-warning"></i> <%= entry.name %></a>
+         </li>
+       <% }) %>
+     </div>
+     <div class="col-12 col-md-6 col-lg-3">
+       <% network.forEach(function(entry){ %>
+         <li class="">
+           <a class="fw-light text-light text-decoration-none" aria-current="page" href="<%= entry.href %>"><i class="bi bi-<%= entry.icon %> align-text-bottom text-warning"></i> <%= entry.name %></a>
+         </li>
+       <% }) %>
+     </div>
+   </div>
+ </footer>

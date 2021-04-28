@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%- include('partials/head.html', {}); %>
+  </head>
+  <body>
+  <%- include('partials/nav.html', {}); %>
+
+  <main class="container bg-dark text-white rounded p-3">
+
+
+    <div class="row">
+      <div class="col pb-2">
+        <div class="text-end">
+          <a href="/view/<%= id %>" class="btn btn-outline-primary btn-sm" tabindex="-1" role="button" aria-disabled="true">View</a>
+        </div>
+      </div>
+    </div>
+
+    <form id="edit-form" action="/save/<%= id %>" method="post">
+    <div class="row">
+      <textarea id="content" name="content" class="bg-dark text-white border-0 w-100"><%- content %></textarea>
+      <div id="editor"></div>
+    </div>
+
+    <div class="row">
+      <div class="col pt-5">
+          <div class="mb-3">
+            <legend class="small">Commit Changes</legend>
+          </div>
+          <div class="mb-3">
+            <input id="comment" name="comment" type="text" class="form-control form-control-sm bg-dark text-white border-secondary" placeholder="Update <%= id %>">
+          </div>
+          <div class="mb-3">
+            <input id="description" name="description" type="text" class="form-control form-control-sm bg-dark text-white border-secondary" placeholder="Add an optional extended description…">
+          </div>
+          <button id="save" type="submit" class="btn btn-warning">Commit Changes</button>
+          <button id="cancel" type="submit" class="btn btn-danger">Cancel</button>
+      </div>
+    </div>
+    </form>
+
+  </main>
+
+  <%- include('partials/footer.html', {}); %>
+  <%- include('partials/foot.html', {}); %>
+
+  <script src="/js/editor.js"></script>
+  <script>
+    const form = document.getElementById('edit-form');
+    function submission(event) {
+      document.getElementById('content').value = editor.state.doc.toString();
+    }
+    form.addEventListener('submit', submission);
+  </script>
+
+  </body>
+</html>

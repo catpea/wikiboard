@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%- include('partials/head.html', {}); %>
+  </head>
+  <body>
+  <%- include('partials/nav.html', {}); %>
+
+  <main class="container bg-dark text-white rounded p-3">
+    <div class="row">
+      <div class="col pb-2">
+        <div class="text-end">
+          <a href="/edit/<%= id %>" class="btn btn-outline-primary btn-sm" tabindex="-1" role="button" aria-disabled="true">Edit</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col pb-2">
+        <div class="bg-dark text-white">
+          <%- content %>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <%- include('partials/footer.html', {}); %>
+  <%- include('partials/foot.html', {}); %>
+  </body>
+</html>
